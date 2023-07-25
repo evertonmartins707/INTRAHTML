@@ -4,6 +4,7 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
+html{scroll-behavior: smooth;}
 main{
   height: calc(100vh - 80px);
   display: flex;
@@ -31,6 +32,8 @@ body a:hover{
 body ul {
   list-style: none;
 }
+
+/* Cabeçalho */
 .header {
   display: flex;
   justify-content: space-between;
@@ -92,6 +95,8 @@ body ul {
 #menu-hamburguer {
   display: none;
 }
+
+/* Apresentação */
 .gallery {
   display: flex;
   align-items: center;
@@ -166,10 +171,21 @@ body ul {
   background-size: auto 130%;
   filter: grayscale(0%);
 }
+
+/* Definições gerais para os próximos itens */
+section i{
+  margin-left: 20px;
+}
+section h2{
+  margin-bottom: 10px;
+}
+section, footer{
+  padding: 20px;
+  background-color: #262626;
+}
+
 /* Seção "About" */
 .about {
-  background: #262626;
-  padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 40px auto ;
@@ -177,13 +193,9 @@ body ul {
 .about h2 {
   grid-column: 1;
   margin: 0;
-  margin-bottom: 10px;
 }
 .about p{
   grid-column: 1;
-}
-.about i{
-  margin-left: 20px;
 }
 .about img {
   grid-column: 2;
@@ -192,14 +204,48 @@ body ul {
   filter: drop-shadow(0 0 5rem #00bf63);
   width: 90%;
 }
-
-
+/* Seção "Services */
+.sites{
+  margin: 20px;
+}
+.sites-cards{
+  display: flex;
+  justify-content: space-around;
+  max-width: 90vw;
+  border: 1px solid;
+}
+.sites-cards-item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 20px auto;
+  margin: 0;
+}
+.sites-cards-item-img{
+  width: 15rem;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+.sites-cards-item-titulo{
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+}
+.sites-cards-item-infor{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+}
+.sites-cards-item button{
+  grid-column: 2;
+  grid-row: 2;
+}
+/* Rodapé */
 footer {
   display: flex;
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  background-color: #262626;
 }
 footer span {
   font-weight: bold;
