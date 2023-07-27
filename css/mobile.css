@@ -21,4 +21,9 @@
     .blocos-cards-item a{
         z-index: 0;
     }
+    .game{
+        margin-top: 20px;
+        width: 90vw;
+        height: 17em;
+    }
 }
