@@ -8,8 +8,9 @@ html{scroll-behavior: smooth;}
 main{
   height: calc(100vh - 80px);
   display: flex;
-    justify-content: center;
-    flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
 }
 @media (max-width: 425px) {
   main {display:block; height: auto;}
@@ -37,10 +38,14 @@ body ul {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 0;
   margin: 0 auto;
   height: 80px;
-  background: #26262646;
+  background: #262626bd;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 .header-brand {
   color: #fff;
@@ -132,6 +137,7 @@ body ul {
   .gallery-card {
     width: 90%;
     margin-bottom: 6%;
+    filter: none;
   }
 }
 .gallery-card-title {
@@ -168,7 +174,6 @@ body ul {
   }
 }
 .gallery #card-1:hover, .gallery #card-2:hover, .gallery #card-3:hover {
-  background-size: auto 130%;
   filter: grayscale(0%);
 }
 
@@ -341,10 +346,6 @@ footer span {
 
 /* Menu hamburguer */
 @media (max-width: 425px) {
-  .header{
-    position: sticky;
-    top: 0;
-  }
   .header-navbar ul {
     height: unset;
     display: unset;
